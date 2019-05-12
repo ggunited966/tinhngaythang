@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="number" id="nhapthang">
+    <button type="button" onclick="tong()">Tinh so ngay</button><br>
+    <label id="ketqua"></label>
+    <script type="text/javascript">
+        function tong() {
+            var a = parseInt(document.getElementById("nhapthang").value);
+            switch (a) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8: 
+                case 10:
+                case 12:
+                    document.getElementById("ketqua").innerHTML = "Thang " + a + " co 31 ngay";
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    document.getElementById("ketqua").innerHTML = "Thang " + a + " co 30 ngay";
+                    break;
+                case 2:
+                    document.getElementById("ketqua").innerHTML = "Thang " + a + " co 28 ngay hoac 29 ngay";
+                    break;
+                default:
+                    document.getElementById("ketqua").innerHTML = "Nhap vao sai thang";
+
+                    break;
+
+            }
+        }
+    </script>
+</body>
+
+</html>
